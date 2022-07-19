@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="error_msg_size">20sp</dimen>
+    <dimen name="error_msg_margin">10dp</dimen>
+    <dimen name="cardView_margin">4dp</dimen>
+</resources>

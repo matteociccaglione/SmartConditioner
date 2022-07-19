@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Smart Conditioner</string>
+    <string name="error_msg_content">There is no configured room. Make sure you logged in</string>
+    <string name="onoff">On</string>
+</resources>

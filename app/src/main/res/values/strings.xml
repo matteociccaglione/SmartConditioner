@@ -2,4 +2,9 @@
     <string name="app_name">Smart Conditioner</string>
     <string name="error_msg_content">There is no configured room. Make sure you logged in</string>
     <string name="onoff">On</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="app_logo">AppLogo</string>
+    <string name="powered_by">Powered by SmartIng</string>
 </resources>

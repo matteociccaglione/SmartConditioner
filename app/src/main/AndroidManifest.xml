@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartConditioner">
+        <activity android:name=".LoginActivity"></activity>
         <activity
             android:name=".SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -22,8 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RoomSpecActivity" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

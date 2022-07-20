@@ -7,4 +7,9 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="app_logo">AppLogo</string>
     <string name="powered_by">Powered by SmartIng</string>
+    <string name="switch_text">Conditioner On/Off</string>
+    <string name="curr_text">Current room temperature</string>
+    <string name="desired_temp">Desired temperature</string>
+    <string name="des_temp">Insert desired temperature</string>
+    <string name="set">Set</string>
 </resources>

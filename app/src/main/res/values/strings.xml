@@ -12,4 +12,8 @@
     <string name="desired_temp">Desired temperature</string>
     <string name="des_temp">Insert desired temperature</string>
     <string name="set">Set</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="api_key">Key</string>
+    <string name="btn_login">Log in</string>
 </resources>

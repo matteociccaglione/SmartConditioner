@@ -28,7 +28,7 @@ class SplashScreenActivity : AppCompatActivity() {
          the login has been already done: if so, go to the MainActivity, else, go to the LoginActivity
          */
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent =Intent(this, MainActivity::class.java)
+            val intent =Intent(this, LoginActivity::class.java)
             startActivity(intent)
             // to avoid to return to splash screen when pushing the back button
             finish()

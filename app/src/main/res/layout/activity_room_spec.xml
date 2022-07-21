@@ -32,9 +32,11 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/set"
+        app:backgroundTint="@color/gradient_dark_blue"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -53,7 +55,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Bathroom"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:fontFamily="@font/quick_zap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,20 +69,26 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2" >
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        android:elevation="4dp"
+        app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/card_view_gradient">
 
             <TextView
                 android:id="@+id/tvDesTemp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:textSize="18sp"
                 android:text="@string/desired_temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -102,7 +112,9 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:text="23°C"
-                android:textSize="25dp"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
                 android:fontFamily="@font/junegullrg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,28 +132,34 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/current_temperature"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleSpec" >
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleSpec"
+        android:elevation="4dp"
+        app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/card_view_gradient_two">
 
             <TextView
                 android:id="@+id/tvCurrTemp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
                 android:text="@string/curr_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"/>
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -161,9 +179,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
-                android:text="23°C"
-                android:textSize="25dp"
                 android:fontFamily="@font/junegullrg"
+                android:text="23°C"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="28dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideline5"

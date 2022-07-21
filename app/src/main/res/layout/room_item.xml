@@ -9,12 +9,12 @@
     android:layout_marginEnd="10dp"
     android:layout_marginBottom="@dimen/cardView_margin"
     android:elevation="4dp"
-    app:cardCornerRadius="10dp"
-    android:backgroundTint="@color/purple_500">
+    app:cardCornerRadius="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_gradient">
 
         <TextView
             android:id="@+id/tvTemperature"
@@ -27,8 +27,8 @@
             android:fontFamily="@font/junegullrg"
             android:text="23°C"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvOnOff"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
             android:layout_marginTop="10dp"
             android:text="Bathroom"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/onoff"
-            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

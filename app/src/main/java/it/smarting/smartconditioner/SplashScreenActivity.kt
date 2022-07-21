@@ -7,6 +7,8 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import it.smarting.smartconditioner.databinding.ActivitySplashScreenBinding
+import it.smarting.smartconditioner.model.User
+
 
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
@@ -22,13 +24,21 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // set splash screen
-        /*
-        TODO:
-         for now let's go to the main activity after the splash screen. In the future, let's check if
-         the login has been already done: if so, go to the MainActivity, else, go to the LoginActivity
-         */
+
+        val sharedPrefs = getSharedPreferences("CloudAccount", MODE_PRIVATE)
+        val username = sharedPrefs.getString("username", "")
+        val key = sharedPrefs.getString("key", "")
+
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent =Intent(this, LoginActivity::class.java)
+            var intent =Intent(this, MainActivity::class.java)
+            if (username!!.isEmpty() || key!!.isEmpty()) {
+                intent = Intent(this, LoginActivity::class.java)
+            } else {
+                val user = User.getInstance()
+                user.username = username
+                user.key = key
+            }
+
             startActivity(intent)
             // to avoid to return to splash screen when pushing the back button
             finish()

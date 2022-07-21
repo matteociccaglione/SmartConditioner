@@ -25,6 +25,7 @@
         android:layout_marginEnd="@dimen/error_msg_margin"
         android:text="@string/error_msg_content"
         android:textSize="@dimen/error_msg_size"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/rvRooms"
         app:layout_constraintStart_toStartOf="parent"

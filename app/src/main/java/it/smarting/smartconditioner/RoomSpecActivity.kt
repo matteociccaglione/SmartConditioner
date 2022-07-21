@@ -54,8 +54,16 @@ class RoomSpecActivity : AppCompatActivity() {
             }else if (feed.key.endsWith("conditionertemperature")){
                 val temp = feed.last_value.toFloat()
                 binding.tvTemp3.text = "%d°C".format(temp.roundToInt())
+                binding.button.setOnClickListener{
+                    val httpSingleton = HttpSingleton.getInstance(this)
+                    val user = User.getInstance()
+                    val value = binding.editTextNumber.text.toString()
+                    httpSingleton.updateSingleFeed(user.username,user.key,feed.key,value)
+                    binding.tvTemp3.text = "%s°C".format(value)
+                }
             }
         }
+
     }
 
     private fun setLiveData(){

@@ -97,18 +97,20 @@ class HttpSingleton constructor(context: Context) {
 
 
     fun updateSingleFeed(username: String, key: String, feedKey:String, value:String){
-        val myUrl = url + "${username}/feeds/${feedKey}"
-        val jsonObjectRequest = object : JsonObjectRequest(Request.Method.PUT, myUrl, JSONObject("{feed : \"${value}\"}"),
+        val myUrl = url + "${username}/feeds/${feedKey}/data"
+        val requestBody = "feed=\"${value}\"".toByteArray()
+        val jsonObjectRequest = object : JsonObjectRequest(Request.Method.POST, myUrl, JSONObject("{\"value\": \"${value}\"}"),
             Response.Listener<JSONObject>{},
-            Response.ErrorListener{}) {
+        Response.ErrorListener{}) {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
                 headers["X-AIO-Key"] = key
+                headers["Content-Type"] = "application/json"
                 return headers
             }
         }
-
+        Log.d("updateRequest",String(jsonObjectRequest.body))
         requestQueue.add(jsonObjectRequest)
     }
 

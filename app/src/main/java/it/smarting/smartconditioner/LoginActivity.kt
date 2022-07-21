@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setUI(){
         binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, RoomSpecActivity::class.java)
             startActivity(intent)
             // to avoid to return to login activity when pushing the back button
             finish()

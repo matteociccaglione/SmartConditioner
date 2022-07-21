@@ -8,12 +8,11 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import it.smarting.smartconditioner.model.Groups
+import it.smarting.smartconditioner.model.Group
 import it.smarting.smartconditioner.viewmodel.GroupsViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlin.math.log
 
 class HttpSingleton constructor(context: Context) {
 
@@ -30,23 +29,23 @@ class HttpSingleton constructor(context: Context) {
     }
 
     private val url = "https://io.adafruit.com/api/v2/"
+    private val requestQueue: RequestQueue = Volley.newRequestQueue(context)
 
-    private val requestQueue : RequestQueue = Volley.newRequestQueue(context)
-
-    private fun getGroup(username: String, key: String, viewModel: GroupsViewModel) {
-        val myUrl = url + "/${username}/groups"
+    private fun getAllGroups(username: String, key: String, viewModel: GroupsViewModel) {
+        val myUrl = url + "${username}/groups"
         val jsonArrayRequest = JsonArrayRequest(Request.Method.GET, myUrl, null, {
-            val listType = object : TypeToken<List<Groups>>() {}.type
-            val listGroups = Gson().fromJson<List<Groups>>(it.toString(), listType)
+            val listType = object : TypeToken<List<Group>>() {}.type
+            val listGroups = Gson().fromJson<List<Group>>(it.toString(), listType)
 
             CoroutineScope(Dispatchers.Main).launch {
                 viewModel.groupList.value = listGroups
                 Log.d("HTTP", "request groups successful")
             }
-        }) {
+        }, {
             // TODO: handle error
-        }
-        jsonArrayRequest.headers.put("X-AIO_Key", key)
+        })
+
+        jsonArrayRequest.headers.put("X-AIO-Key", key)
         requestQueue.add(jsonArrayRequest)
     }
 

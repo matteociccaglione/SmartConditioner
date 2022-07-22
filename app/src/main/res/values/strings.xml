@@ -16,4 +16,7 @@
     <string name="username">Username</string>
     <string name="api_key">Key</string>
     <string name="btn_login">Log in</string>
+    <string name="room_name_hint">Room name</string>
+    <string name="canc">CANC</string>
+    <string name="ok">OK</string>
 </resources>

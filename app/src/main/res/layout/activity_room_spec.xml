@@ -49,6 +49,16 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
+    <ImageButton
+        android:id="@+id/ibEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitleSpec"
+        app:layout_constraintStart_toEndOf="@+id/tvTitleSpec"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleSpec"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
     <TextView
         android:id="@+id/tvTitleSpec"
         android:layout_width="wrap_content"

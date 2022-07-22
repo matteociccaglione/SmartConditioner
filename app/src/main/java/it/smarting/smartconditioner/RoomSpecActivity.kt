@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import it.smarting.smartconditioner.databinding.ActivityRoomSpecBinding
+import it.smarting.smartconditioner.dialog.RenameRoomDialog
 import it.smarting.smartconditioner.http.HttpSingleton
 import it.smarting.smartconditioner.model.Group
 import it.smarting.smartconditioner.model.User
@@ -33,12 +34,25 @@ class RoomSpecActivity : AppCompatActivity() {
     }
 
     private fun setUI(){
+
         if (group.feeds.isEmpty() || group.key.isEmpty())
             return
 
         for (feed in group.feeds) {
-            if (feed.key.endsWith("room"))
+            if (feed.key.endsWith("room")) {
                 binding.tvTitleSpec.text = feed.last_value
+                binding.ibEdit.setOnClickListener{
+                    val dialog = RenameRoomDialog.getInstance()
+                    dialog.setOnOkPressed {
+                        val httpSingleton = HttpSingleton.getInstance(this)
+                        val user = User.getInstance()
+                        val value = it
+                        httpSingleton.updateSingleFeed(user.username, user.key, feed.key, value)
+                        binding.tvTitleSpec.text = value
+                    }
+                    dialog.show(supportFragmentManager,"DIALOG")
+                }
+            }
             else if (feed.key.endsWith("sensedtemperature")) {
                 val temp = feed.last_value.toFloat()
                 binding.tvTemp2.text = "%d°C".format(temp.roundToInt())

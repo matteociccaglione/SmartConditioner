@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Conditioner</string>
+    <string name="error_msg_content">Nessuna stanza configurata. Accertati di aver effettuato il login</string>
+    <string name="switch_text">Condizionatore On/Off</string>
+    <string name="curr_text">Temperatura stanza</string>
+    <string name="desired_temp">Temperatura desiderata</string>
+    <string name="des_temp">Imposta temperatura</string>
+    <string name="room_name_hint">Nome stanza</string>
+    <string name="room">Stanza</string>
+</resources>

@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartConditioner">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity"
+            android:label="@string/login"/>
         <activity
             android:name=".SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
-            android:label="@string/title_activity_splash_screen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RoomSpecActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".RoomSpecActivity"
+            android:label="@string/room"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/home" />
     </application>
 
 </manifest>

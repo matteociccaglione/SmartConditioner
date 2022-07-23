@@ -20,10 +20,11 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.8" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/swOnOff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:text="@string/switch_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,11 +54,14 @@
         android:id="@+id/ibEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/tvTitleSpec"
         app:layout_constraintStart_toEndOf="@+id/tvTitleSpec"
         app:layout_constraintTop_toTopOf="@+id/tvTitleSpec"
-        app:srcCompat="@drawable/ic_baseline_edit_24" />
+        app:srcCompat="@drawable/ic_baseline_edit_24"
+        android:contentDescription="@string/imageBtn" />
 
     <TextView
         android:id="@+id/tvTitleSpec"
@@ -76,12 +80,14 @@
         android:id="@+id/desired_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2"
-        android:elevation="4dp"
-        app:cardCornerRadius="15dp">
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -95,10 +101,10 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:textSize="18sp"
                 android:text="@string/desired_temp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -121,15 +127,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
+                android:fontFamily="@font/junegullrg"
                 android:text="23°C"
-                android:textSize="25sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/junegullrg"
+                android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideline6"
                 app:layout_constraintTop_toBottomOf="@id/tvDesTemp" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline6"
                 android:layout_width="wrap_content"
@@ -163,7 +170,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:text="@string/curr_text"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -192,7 +199,7 @@
                 android:fontFamily="@font/junegullrg"
                 android:text="23°C"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="28dp"
+                android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideline5"
@@ -217,6 +224,7 @@
         android:ems="10"
         android:hint="@string/des_temp"
         android:inputType="number"
+        android:minHeight="48dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"

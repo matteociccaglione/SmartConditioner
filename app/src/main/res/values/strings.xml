@@ -1,22 +1,25 @@
 <resources>
     <string name="app_name">Smart Conditioner</string>
     <string name="error_msg_content">There is no configured room. Make sure you logged in</string>
-    <string name="onoff">On</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="app_logo">AppLogo</string>
-    <string name="powered_by">Powered by SmartIng</string>
+    <string name="onoff" translatable="false">On</string>
+    <string name="title_activity_splash_screen" translatable="false">SplashScreenActivity</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+    <string name="app_logo" translatable="false">AppLogo</string>
+    <string name="powered_by" translatable="false">Powered by SmartIng</string>
     <string name="switch_text">Conditioner On/Off</string>
     <string name="curr_text">Current room temperature</string>
     <string name="desired_temp">Desired temperature</string>
-    <string name="des_temp">Insert desired temperature</string>
-    <string name="set">Set</string>
-    <string name="login">Login</string>
-    <string name="username">Username</string>
-    <string name="api_key">Key</string>
-    <string name="btn_login">Log in</string>
+    <string name="des_temp">Set temperature</string>
+    <string name="set" translatable="false">Set</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="api_key" translatable="false">Key</string>
+    <string name="btn_login" translatable="false">Log in</string>
     <string name="room_name_hint">Room name</string>
-    <string name="canc">CANC</string>
-    <string name="ok">OK</string>
+    <string name="canc" translatable="false">CANC</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="room">Room</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="imageBtn" translatable="false">Image Btn</string>
 </resources>

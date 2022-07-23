@@ -21,7 +21,6 @@ import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
-import kotlin.collections.HashMap
 
 class HttpSingleton constructor(context: Context) {
 

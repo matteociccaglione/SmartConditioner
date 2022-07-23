@@ -1,15 +1,18 @@
 package it.smarting.smartconditioner
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import it.smarting.smartconditioner.databinding.ActivitySplashScreenBinding
 import it.smarting.smartconditioner.model.User
 
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
 

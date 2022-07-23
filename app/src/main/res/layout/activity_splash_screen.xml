@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/smart_air_conditioner_2"
+        app:srcCompat="@drawable/smart_air_conditioner_2_transparent"
         android:contentDescription="@string/app_logo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -36,6 +36,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/cream_cake"
         android:text="@string/powered_by"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"

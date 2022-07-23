@@ -1,16 +1,14 @@
 package it.smarting.smartconditioner
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import it.smarting.smartconditioner.databinding.ActivityRoomSpecBinding
 import it.smarting.smartconditioner.dialog.RenameRoomDialog
 import it.smarting.smartconditioner.http.HttpSingleton
 import it.smarting.smartconditioner.model.Group
 import it.smarting.smartconditioner.model.User
-import it.smarting.smartconditioner.viewmodel.GroupsViewModel
 import it.smarting.smartconditioner.viewmodel.SingleGroupViewModel
 import java.util.*
 import kotlin.math.roundToInt

@@ -8,4 +8,6 @@
     <string name="des_temp">Imposta temperatura</string>
     <string name="room_name_hint">Nome stanza</string>
     <string name="room">Stanza</string>
+    <string name="errorMsg">La temperatura deve essere tra 16 °C e 30 °C</string>
+    <string name="errorMsg2">Sono consentiti solo valori numerici</string>
 </resources>

@@ -22,4 +22,6 @@
     <string name="room">Room</string>
     <string name="home" translatable="false">Home</string>
     <string name="imageBtn" translatable="false">Image Btn</string>
+    <string name="errorMsg" translatable="true">Temperature should be between 16 °C and 30 °C</string>
+    <string name="errorMsg2">Only digits are allowed</string>
 </resources>

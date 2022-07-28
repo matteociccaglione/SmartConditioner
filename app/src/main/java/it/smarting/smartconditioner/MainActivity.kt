@@ -1,9 +1,12 @@
 package it.smarting.smartconditioner
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -14,6 +17,7 @@ import it.smarting.smartconditioner.http.HttpSingleton
 import it.smarting.smartconditioner.model.Group
 import it.smarting.smartconditioner.model.User
 import it.smarting.smartconditioner.viewmodel.GroupsViewModel
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -1,8 +1,10 @@
 package it.smarting.smartconditioner
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
 import androidx.lifecycle.Observer
 import it.smarting.smartconditioner.databinding.ActivityRoomSpecBinding
 import it.smarting.smartconditioner.dialog.RenameRoomDialog
@@ -70,8 +72,19 @@ class RoomSpecActivity : AppCompatActivity() {
                     val httpSingleton = HttpSingleton.getInstance(this)
                     val user = User.getInstance()
                     val value = binding.editTextNumber.text.toString()
-                    httpSingleton.updateSingleFeed(user.username,user.key,feed.key,value)
-                    binding.tvTemp3.text = "%s°C".format(value)
+                    if(value.isDigitsOnly()){
+                        val nValue = value.toInt()
+                        if(nValue>=16 && nValue<=30){
+                            httpSingleton.updateSingleFeed(user.username,user.key,feed.key,value)
+                            binding.tvTemp3.text = "%s°C".format(value)
+                        }
+                        else{
+                            Toast.makeText(this,R.string.errorMsg,Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    else{
+                        Toast.makeText(this,R.string.errorMsg2,Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         }
